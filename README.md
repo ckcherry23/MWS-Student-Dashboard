@@ -1,2 +1,2 @@
 # MWS-Student-Dashboard
-This is a website for students at MWS Christlike Student Center to use as a resource dashboard.
+This is a website for students at MWS Christalite Student Center to use as an education resource dashboard.
