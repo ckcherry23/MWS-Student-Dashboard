@@ -1,13 +1,24 @@
+:root {
+    --blue: #346fb4;
+    --yellow: #e5af44;
+    --green: #72e858;
+    --cream: #f4d087;
+    --grey: #e5e5e5;
+    --dark: #333333;
+}
+
 .login-wrapper {
     display: flex;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* flex-direction: column; */
-    padding: 50px;
+    /* padding: 50px; */
     /* align-items: center; */
 
 }
 
 .loginimg {
-    width: 45%;
+    height: 100vh;
+    padding-left: 50px;
 }
 
 
@@ -15,30 +26,35 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 300px;
+    padding-left: 200px;
     align-items: center;
     height: 100vh;
 }
 
 .button-2 {
- background-color: rgba(51, 51, 51, 0.05);
- border-radius: 8px;
- border-width: 0;
- color: #333333;
- cursor: pointer;
- display: inline-block;
- font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
- font-size: 14px;
- font-weight: 500;
- line-height: 20px;
- list-style: none;
- margin: 0;
- padding: 10px 12px;
- text-align: center;
- transition: all 200ms;
- vertical-align: baseline;
- white-space: nowrap;
- user-select: none;
- -webkit-user-select: none;
- touch-action: manipulation;
+    background-color: var(--yellow);
+    border-radius: 8px;
+    border-width: 0;
+    color: var(--dark);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    transform: translateX(50%);
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-2:hover {
+    background-color: var(--cream);
 }
