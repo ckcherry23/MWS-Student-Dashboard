@@ -11,19 +11,16 @@ import useToken from './useToken';
 function App() {
     const { token, setToken } = useToken();
 
-    if(!token) {
+    if (!token) {
         return <Login setToken={setToken} />
     }
 
     return (
         <div className="wrapper">
-            <Dashboard />
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/Dashboard" element={<Dashboard />} />
-                    <Route path="/Subject" element={<Subject /> } />
-                </Routes>
-            </BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/Subject" element={<Subject />} />
+            </Routes>
         </div>
     );
 }
