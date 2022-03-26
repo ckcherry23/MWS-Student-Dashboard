@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
 import loginimg from '../img/loginpageimg.png';
-import { useNavigate } from "react-router-dom";
 
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
@@ -18,7 +17,6 @@ async function loginUser(credentials) {
 export default function Login({ setToken }) {
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
-    const navigate = useNavigate();
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -29,9 +27,9 @@ export default function Login({ setToken }) {
         setToken(token);
     }
 
-    return (
+    return(
         <div className="login-wrapper">
-            <img className="loginimg" src={loginimg} alt={"login"} />
+            <img className = "loginimg" src ={loginimg}  alt={"login"}/>
             <div className={"login-wrapper2"}>
                 <h1>Log in Here!</h1>
                 <form onSubmit={handleSubmit}>
