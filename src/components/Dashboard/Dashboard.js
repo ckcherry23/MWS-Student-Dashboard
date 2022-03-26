@@ -8,7 +8,7 @@ export default function Dashboard() {
         <div>
             <h2>Welcome!</h2>
             <button type="button" onClick={() => navigate("/subject")}>
-                Subject
+                Science
             </button>
         </div>
     );

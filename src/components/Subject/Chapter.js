@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function Subject() {
+export default function Chapter(props) {
   return (
     <div>
-      <h2>Cells</h2>
+      <h3>{props.title}</h3>
+      <h6>{props.section.toUpperCase()}</h6>
     </div>
   );
 }

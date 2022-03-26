@@ -1,18 +1,16 @@
 import React from "react";
-import Chapter from "./Chapter.js"
+import Chapter from "./Chapter.js";
 import chapterData from "./chapters.json";
 import { useNavigate } from "react-router-dom";
 
 export default function Subject() {
-    const getChapters = () => {
-        fetch('data/chapters.json');
-        console.log()
-    }
+    const chapters = JSON.parse(JSON.stringify(chapterData));
+
     const navigate = useNavigate();
     return (
         <div>
             <h2>Science</h2>
-            <Chapter />
+            {chapters.map((chapter) => <Chapter title={chapter.title} section={chapter.section} />)}
             <button type="button" onClick={() => navigate(-1)}>
                 Back
             </button>
