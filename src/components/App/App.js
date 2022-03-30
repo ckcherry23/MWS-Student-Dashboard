@@ -18,7 +18,7 @@ function App() {
     return (
         <div className="wrapper">
             <Routes>
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/Dashboard" element={<Dashboard />} />
                 <Route path="/Subject" element={<Subject />} />
             </Routes>
         </div>
