@@ -5,25 +5,49 @@
     --cream: #f4d087;
     --grey: #e5e5e5;
     --dark: #333333;
+
+    --dark-blue: #25335a;
+    --dark-gray: #141824;
 }
 
 .chapter-wrapper {
-    background-image: linear-gradient(to right, var(--blue), black);
-    width: 300px;
+    background-image: linear-gradient(to right, var(--dark-blue), var(--dark-gray));
+    width: 400px;
+    height: 100px;
     border-radius: 16px;
-    margin: 8px;
-    padding: 16px;
+    margin: 8px 16px;
+    padding: 16px 32px;
     box-shadow: 2px 2px 4px #000000;
 }
 
+@media (max-width: 1032px) {
+    .chapter-wrapper {
+       width: 300px;
+       margin: 8px 8px;
+    }
+ }
+
+.chapter-wrapper:hover {
+    background-image: linear-gradient(to right, var(--blue), var(--dark-blue));
+}
+
+.chapter-wrapper:active {
+    box-shadow: 1px 1px #000000; 
+}
+
+.chapter {
+    display: inline-block;
+}
+
 .section {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
+    line-height: 20px;
     color: white;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 24px;
     color: white;
@@ -32,4 +56,5 @@
 .chapter-image {
     height: 50px;
     width: 50px;
+    display: inline-block;
 }

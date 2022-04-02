@@ -1,5 +1,23 @@
 [
     {
+        "title": "Periodic Table",
+        "section": "Chemistry",
+        "image": "https://chemdictionary.org/wp-content/uploads/2019/09/chemistry-dictionary.png",
+        "index": 8
+    },
+    {
+        "title": "Digestion",
+        "section": "Biology",
+        "image": "https://www.yottavolt.com/wp-content/uploads/2019/08/biology.png",
+        "index": 9
+    },
+    {
+        "title": "Plastics",
+        "section": "Chemistry",
+        "image": "https://chemdictionary.org/wp-content/uploads/2019/09/chemistry-dictionary.png",
+        "index": 10
+    },
+    {
         "title": "Laws of Motion",
         "section": "Physics",
         "image": "https://jctuition.com.sg/wp-content/uploads/JC-Physics-Icon.png",
@@ -40,23 +58,5 @@
         "section": "Physics",
         "image": "https://jctuition.com.sg/wp-content/uploads/JC-Physics-Icon.png",
         "index": 7
-    },
-    {
-        "title": "Periodic Table",
-        "section": "Chemistry",
-        "image": "https://chemdictionary.org/wp-content/uploads/2019/09/chemistry-dictionary.png",
-        "index": 8
-    },
-    {
-        "title": "Digestion",
-        "section": "Biology",
-        "image": "https://www.yottavolt.com/wp-content/uploads/2019/08/biology.png",
-        "index": 9
-    },
-    {
-        "title": "Plastics",
-        "section": "Chemistry",
-        "image": "https://chemdictionary.org/wp-content/uploads/2019/09/chemistry-dictionary.png",
-        "index": 10
     }
 ]

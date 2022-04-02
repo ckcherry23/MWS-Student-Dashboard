@@ -1,0 +1,20 @@
+
+:root {
+    --blue: #346fb4;
+    --yellow: #e5af44;
+    --green: #72e858;
+    --cream: #f4d087;
+    --grey: #e5e5e5;
+    --dark: #333333;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ .back {
+     
+ }

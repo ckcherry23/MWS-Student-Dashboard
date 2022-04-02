@@ -21,11 +21,7 @@
     padding-left: 50px;
 }
 
-@media (max-width: 900px) {
-    .loginimg {
-       display: none; 
-    }
- }
+
 
 
 .login-wrapper2 {
