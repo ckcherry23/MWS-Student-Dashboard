@@ -1,0 +1,35 @@
+:root {
+    --blue: #346fb4;
+    --yellow: #e5af44;
+    --green: #72e858;
+    --cream: #f4d087;
+    --grey: #e5e5e5;
+    --dark: #333333;
+}
+
+.chapter-wrapper {
+    background-image: linear-gradient(to right, var(--blue), black);
+    width: 300px;
+    border-radius: 16px;
+    margin: 8px;
+    padding: 16px;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.section {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: white;
+}
+
+.chapter-image {
+    height: 50px;
+    width: 50px;
+}

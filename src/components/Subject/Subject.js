@@ -10,7 +10,7 @@ export default function Subject() {
     return (
         <div>
             <h2>Science</h2>
-            {chapters.map((chapter) => <Chapter title={chapter.title} section={chapter.section} />)}
+            {chapters.map((chapter) => <Chapter title={chapter.title} section={chapter.section} index={chapter.index} image={chapter.image}/>)}
             <button type="button" onClick={() => navigate(-1)}>
                 Back
             </button>

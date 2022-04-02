@@ -1,10 +1,12 @@
 import React from "react";
+import './Chapter.css';
 
 export default function Chapter(props) {
   return (
-    <div>
-      <h3>{props.title}</h3>
-      <h6>{props.section.toUpperCase()}</h6>
+    <div className="chapter-wrapper">
+      <img className="chapter-image" src={props.image} alt="Chapter image" />
+      <div className="section">{props.section.toUpperCase()}</div>
+      <div className="title">{props.index}. {props.title}</div>
     </div>
   );
 }
