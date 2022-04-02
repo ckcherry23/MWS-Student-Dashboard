@@ -3,6 +3,8 @@ import Chapter from "./Chapter.js";
 import chapterData from "./chapters.json";
 import { useNavigate } from "react-router-dom";
 import './Subject.css';
+import { ArrowBackIos } from '@mui/icons-material';
+import { SvgIcon } from '@mui/material';
 
 export default function Subject() {
     const chapters = JSON.parse(JSON.stringify(chapterData)).sort((a,b)=> a.index-b.index);
@@ -12,6 +14,7 @@ export default function Subject() {
         <div>
             <h2>Science</h2>
             <button className="back" type="button" onClick={() => navigate(-1)}>
+                <SvgIcon component={ArrowBackIos}/>
                 Back
             </button>
             <div className="grid">
