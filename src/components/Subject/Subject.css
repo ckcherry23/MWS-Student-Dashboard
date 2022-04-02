@@ -8,6 +8,13 @@
     --dark: #333333;
 }
 
+.subject {
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+
 .grid {
     display: flex;
     flex-direction: row;
@@ -19,14 +26,14 @@
     display: flex;
     align-items: center;
     background-color: transparent;
-    border-width: 0.25px;
+    border-width: 1px;
     background-color: var(--grey);
-    border-color: transparent;
+    border-color: var(--grey);
     font-weight: bold;
     padding: 8px;
     border-radius: 8px;
  }
 
  .back:hover {
-    border-color: var(--grey);
+    border-color: transparent;
  }

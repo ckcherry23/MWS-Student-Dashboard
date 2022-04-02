@@ -12,7 +12,9 @@ export default function Subject() {
     const navigate = useNavigate();
     return (
         <div>
-            <h2>Science</h2>
+            <div className="subject">
+                Science
+            </div>
             <button className="back" type="button" onClick={() => navigate(-1)}>
                 <SvgIcon component={ArrowBackIos}/>
                 Back
