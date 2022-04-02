@@ -17,7 +17,6 @@ export default function Subject() {
             <div className="grid">
             {chapters.map((chapter) => <div className="grid-item"><Chapter title={chapter.title}
                 section={chapter.section}
-                index={chapter.index}
                 image={chapter.image} /></div>)}
             </div>
         </div>

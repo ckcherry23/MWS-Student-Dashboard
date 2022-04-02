@@ -18,6 +18,8 @@
     margin: 8px 16px;
     padding: 16px 32px;
     box-shadow: 2px 2px 4px #000000;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width: 1032px) {
@@ -37,6 +39,7 @@
 
 .chapter {
     display: inline-block;
+    align-self: center;
 }
 
 .section {
@@ -54,7 +57,8 @@
 }
 
 .chapter-image {
-    height: 50px;
-    width: 50px;
+    height: 100px;
     display: inline-block;
+    align-items: center;
+    padding-right: 20px;
 }
