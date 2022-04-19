@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
@@ -18,7 +18,7 @@ function App() {
     return (
         <div className="wrapper">
             <Routes>
-                <Route path="/Dashboard" element={<Dashboard />} />
+                <Route path="/" element={<Dashboard />} />
                 <Route path="/Subject" element={<Subject />} />
             </Routes>
         </div>
