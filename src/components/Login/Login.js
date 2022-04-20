@@ -33,7 +33,7 @@ export default function Login({ setToken }) {
         <div className="login-wrapper">
             <img className="loginimg" src={loginimg} alt={"login"} />
             <div className={"login-wrapper2"}>
-                <h1>Log in Here!</h1>
+                <h1>Log in here!</h1>
                 <form onSubmit={handleSubmit}>
                     <label>
                         <p>Username</p>
