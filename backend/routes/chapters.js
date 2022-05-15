@@ -16,4 +16,28 @@ router.route('/add').post((req,res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:id').get((req, res) => {
+    Chapter.findById(req.params.id)
+        .then(chapter => res.json(chapter))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/:id').delete((req, res) => {
+    Chapter.findByIdAndDelete(req.params.id)
+        .then(() => res.json('Chapter deleted.'))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/update/:id').post((req, res) => {
+    Chapter.findById(req.params.id)
+        .then(chapter => {
+            chapter.chapterName = req.body.chapterName;
+
+            chapter.save()
+                .then(() => res.json('Chapter updated!'))
+                .catch(err => res.status(400).json('Error: ' + err)); 
+        })
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
 module.exports = router;
