@@ -5,10 +5,10 @@ export default function Chapter(props) {
   return (
     <div className="chapter-wrapper">
       <div className="chapter">
-        <div className="section">{props.section.toUpperCase()}</div>
-        <div className="title">{props.title}</div>
+        <div className="section">{props.chapter.section.toUpperCase()}</div>
+        <div className="chapter-name">{props.chapter.chapterName}</div>
       </div>
-      <img className="chapter-image" src={props.image} alt="Chapter image" />
+      <img className="chapter-image" src={props.chapter.image} alt="Chapter image" />
     </div>
   );
 }

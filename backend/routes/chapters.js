@@ -7,9 +7,14 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req,res) => {
+router.route('/add').post((req, res) => {
     const chapterName = req.body.chapterName;
-    const newChapter = new Chapter({chapterName});
+    const subject = req.body.subject;
+    const section = req.body.section;
+    const image = req.body.image;
+    const index = req.body.index;
+
+    const newChapter = new Chapter({ chapterName, subject, section, image, index });
 
     newChapter.save()
         .then(() => res.json('Chapter added!'))
@@ -32,10 +37,14 @@ router.route('/update/:id').post((req, res) => {
     Chapter.findById(req.params.id)
         .then(chapter => {
             chapter.chapterName = req.body.chapterName;
+            chapter.subject = req.body.subject;
+            chapter.section = req.body.section;
+            chapter.image = req.body.image;
+            chapter.index = req.body.index;
 
             chapter.save()
                 .then(() => res.json('Chapter updated!'))
-                .catch(err => res.status(400).json('Error: ' + err)); 
+                .catch(err => res.status(400).json('Error: ' + err));
         })
         .catch(err => res.status(400).json('Error: ' + err));
 });
