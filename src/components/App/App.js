@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigationType } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
 import './App.css';
