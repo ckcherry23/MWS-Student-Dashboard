@@ -1,8 +1,6 @@
 import React from "react";
 import { Component } from "react";
 import Chapter from "./Chapter.js";
-import chapterData from "./chapters.json";
-import { useNavigate } from "react-router-dom";
 import './Subject.css';
 import { ArrowBackIos } from '@mui/icons-material';
 import { SvgIcon } from '@mui/material';
@@ -13,7 +11,6 @@ export default class Subject extends Component {
         super(props);
         this.state = {
             chapters: [],
-            // navigate: useNavigate(),
         };
     }
 
@@ -34,13 +31,14 @@ export default class Subject extends Component {
     }
 
     render() {
-        const { navigation } = this.props;
+        const { navigate } = this.props;
+        console.log(this.props.navigate);
         return (
             <div>
                 <div className="subject">
                     Science
                 </div>
-                <button className="back" type="button" onClick={() => navigation.navigate(-1)}>
+                <button className="back" type="button" onClick={() => navigate(-1)}>
                     <SvgIcon component={ArrowBackIos} />
                     Back
                 </button>
