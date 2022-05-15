@@ -18,6 +18,10 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 });
 
+const chaptersRouter = require('./routes/chapters');
+
+app.use('/chapters', chaptersRouter);
+
 app.use('/login', (req, res) => {
     res.send({
         token: 'test123'

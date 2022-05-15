@@ -5,10 +5,7 @@ const Schema = mongoose.Schema;
 const chapterSchema = new Schema({
     chapterName: {
         type: String,
-        required: true,
-        trim: true,
-        unique: true,
-        minlength: 2,
+        required: true
     }
 }, {
     timestamps: true,
