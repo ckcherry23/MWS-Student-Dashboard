@@ -1,0 +1,41 @@
+
+:root {
+    --blue: #346fb4;
+    --yellow: #e5af44;
+    --green: #72e858;
+    --cream: #f4d087;
+    --grey: #e5e5e5;
+    --dark: #333333;
+}
+
+.subject {
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0;
+}
+
+ .back {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-width: 1px;
+    background-color: var(--grey);
+    border-color: var(--grey);
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 8px;
+ }
+
+ .back:hover {
+    border-color: transparent;
+ }
+ 
