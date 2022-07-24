@@ -68,7 +68,7 @@
     background-color: var(--cream);
 }
 
-.register-button {
+.login-button {
     background-color: transparent;
     border-radius: 8px;
     border-width: 0;
@@ -91,7 +91,7 @@
     text-decoration: underline;
 }
 
-.register-button:hover {
+.login-button:hover {
     filter: brightness(150%);
 }
 
