@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Login.css';
+import './register.css';
 import loginimg from '../img/loginpageimg.png';
 import { useNavigate } from "react-router-dom";
 
-async function loginUser(credentials) {
-    return fetch('http://localhost:8080/api/login', {
+async function registerUser(credentials) {
+    return fetch('http://localhost:8080/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -15,14 +15,14 @@ async function loginUser(credentials) {
         .then(data => data.json())
 }
 
-export default function Login({ setToken }) {
+export default function register({ setToken }) {
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
     const navigate = useNavigate();
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const token = await loginUser({
+        const token = await registerUser({
             username,
             password
         });
@@ -30,9 +30,9 @@ export default function Login({ setToken }) {
     }
 
     return (
-        <div className="login-wrapper">
-            <img className="loginimg" src={loginimg} alt={"login"} />
-            <div className={"login-wrapper2"}>
+        <div className="register-wrapper">
+            <img className="registerimg" src={loginimg} alt={"register"} />
+            <div className={"register-wrapper2"}>
                 <h1>Log in here!</h1>
                 <form onSubmit={handleSubmit}>
                     <label>
@@ -44,7 +44,7 @@ export default function Login({ setToken }) {
                         <input type="password" onChange={e => setPassword(e.target.value)} />
                     </label>
                     <div className='button-wrapper'>
-                        <button className="button-2" type="submit">Login</button>
+                        <button className="button-2" type="submit">register</button>
                     </div>
                 </form>
                 <br/>
@@ -56,6 +56,6 @@ export default function Login({ setToken }) {
     )
 }
 
-Login.propTypes = {
+register.propTypes = {
     setToken: PropTypes.func.isRequired
 };

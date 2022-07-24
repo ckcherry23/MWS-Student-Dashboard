@@ -7,7 +7,7 @@
     --dark: #333333;
 }
 
-.login-wrapper {
+.register-wrapper {
     display: flex;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* flex-direction: column; */
@@ -16,18 +16,18 @@
 
 }
 
-.loginimg {
+.registerimg {
     height: 100vh;
     padding-left: 50px;
 }
 
 @media (max-width: 900px) {
-    .loginimg {
+    .registerimg {
        display: none; 
     }
  }
 
-.login-wrapper2 {
+.register-wrapper2 {
     display: flex;
     justify-content: center;
     flex-direction: column;

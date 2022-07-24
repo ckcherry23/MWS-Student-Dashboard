@@ -19,13 +19,40 @@ connection.once('open', () => {
 });
 
 const chaptersRouter = require('./routes/chapters');
+const User = require('./models/user.model');
 
 app.use('/chapters', chaptersRouter);
 
-app.use('/login', (req, res) => {
-    res.send({
-        token: 'test123'
-    });
+app.post('/api/register', async (req, res) => {
+    console.log(req.body);
+    try {
+        const user = await userSchema.create({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+        });
+        res.json({status: 'ok'});
+    } catch (err) {
+        res.json({status: 'error', error: 'Duplicate email'});
+    }
+})
+
+app.use('/api/login', async (req, res) => {
+
+        const user = await User.findOne({
+            email: req.body.email, 
+            password: req.body.password
+        });
+        
+        if (user) {
+            return res.json({status: 'ok', user: true});
+        } else {
+            return res.json({status: 'error', user: false}); 
+        }
+        // res.send({
+        //     token: 'test123'
+        // });
+
 });
 
 app.listen(port, () => console.log(`Server is running on port: ${port}`));
