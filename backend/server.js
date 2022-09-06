@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 require('dotenv').config();
 
@@ -38,21 +39,21 @@ app.post('/api/register', async (req, res) => {
 })
 
 app.use('/api/login', async (req, res) => {
-
         const user = await User.findOne({
             email: req.body.email, 
             password: req.body.password
         });
         
         if (user) {
-            return res.json({status: 'ok', user: true});
+            const token = jwt.sign({ 
+                name: user.name,
+                email: user.email,
+            }, 'cn839^*cl94dm#^(DFfpw2'); // random secret
+
+            return res.json({status: 'ok', user: token});
         } else {
             return res.json({status: 'error', user: false}); 
         }
-        // res.send({
-        //     token: 'test123'
-        // });
-
 });
 
 app.listen(port, () => console.log(`Server is running on port: ${port}`));
