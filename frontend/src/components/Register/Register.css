@@ -7,7 +7,7 @@
     --dark: #333333;
 }
 
-.login-wrapper {
+.register-wrapper {
     display: flex;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* flex-direction: column; */
@@ -16,24 +16,29 @@
 
 }
 
-.loginimg {
+.registerimg {
     height: 100vh;
     padding-left: 50px;
 }
 
 @media (max-width: 900px) {
-    .loginimg {
+    .registerimg {
        display: none; 
     }
  }
 
-.login-wrapper2 {
+.register-wrapper2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     width: 100%;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .button-2 {
@@ -53,7 +58,6 @@
     text-align: center;
     transition: all 200ms;
     vertical-align: baseline;
-    transform: translateX(50%);
     white-space: nowrap;
     user-select: none;
     -webkit-user-select: none;
@@ -63,3 +67,31 @@
 .button-2:hover {
     background-color: var(--cream);
 }
+
+.login-button {
+    background-color: transparent;
+    border-radius: 8px;
+    border-width: 0;
+    color: var(--blue);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-decoration: underline;
+}
+
+.login-button:hover {
+    filter: brightness(150%);
+}
+
