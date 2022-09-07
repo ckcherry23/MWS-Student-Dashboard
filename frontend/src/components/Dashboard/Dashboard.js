@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import science_img from './subjects_icons/Science.png';
@@ -8,9 +8,22 @@ import english_img from './subjects_icons/English.png';
 import socsci_img from './subjects_icons/SocialScience.png';
 import chinese_img from './subjects_icons/Chinese.png';
 import Subject from "../Subject/Subject.js";
+import jwt from 'jwt-decode';
+import { useState } from "react";
 
 export default function Dashboard() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+            const user = jwt(token);
+            if (!user) {
+                localStorage.removeItem('token');
+                window.location.href = '/login'
+                navigate("/login", { replace: true })
+            } 
+    }, [])
+
     return (
         <div>
             <h2>Welcome!</h2>

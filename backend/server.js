@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
 require('dotenv').config();
 
@@ -27,10 +28,11 @@ app.use('/chapters', chaptersRouter);
 app.post('/api/register', async (req, res) => {
     console.log(req.body);
     try {
+        const newPassword = await bcrypt.hash(req.body.password, 10)
         await User.create({
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password,
+            password: newPassword,
         });
         res.json({status: 'ok'});
     } catch (err) {
@@ -40,11 +42,16 @@ app.post('/api/register', async (req, res) => {
 
 app.use('/api/login', async (req, res) => {
         const user = await User.findOne({
-            email: req.body.email, 
-            password: req.body.password
+            email: req.body.email
         });
+
+        if (!user) {
+            return res.json({ status: 'error', 'error': 'Invalid login' });
+        }
+
+        const isPasswordValid = await bcrypt.compare(req.body.password, user.password);
         
-        if (user) {
+        if (isPasswordValid) {
             const token = jwt.sign({ 
                 name: user.name,
                 email: user.email,
