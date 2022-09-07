@@ -2,7 +2,7 @@ h2 {
     text-align: center;
   }
   
-  .grid {
+  .subject-grid {
     display: grid;
     grid-template-columns: repeat(3,150px);  
     grid-template-rows: repeat(3,150px);
@@ -10,7 +10,7 @@ h2 {
     justify-content: center;
   }
   
-  .grid-item{
+  .subject-grid-item{
     padding:20px;
   }
 

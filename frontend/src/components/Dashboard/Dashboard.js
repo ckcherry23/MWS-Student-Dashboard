@@ -28,38 +28,38 @@ export default function Dashboard() {
         <div>
             <h2>Welcome!</h2>
 
-            <div className="grid">
-                <div className="grid-item">
+            <div className="subject-grid">
+                <div className="subject-grid-item">
                     <img className="subject_icon" src={science_img} alt="Science" />
                     <button type="button" onClick={() => navigate("/subject")}>
                         Science
                     </button>
                 </div>
-                <div className="grid-item">
+                <div className="subject-grid-item">
                     <img className="subject_icon" src={math_img} alt="Maths" />
                     <button type="button" onClick={() => navigate("/subject")}>
                         Maths
                     </button>
                 </div>
-                <div className="grid-item">
+                <div className="subject-grid-item">
                     <img className="subject_icon" src={computers_img} alt="Computers" />
                     <button type="button" onClick={() => navigate("/subject")}>
                         Computers
                     </button>
                 </div>
-                <div className="grid-item">
+                <div className="subject-grid-item">
                     <img className="subject_icon" src={english_img} alt="English" />
                     <button type="button" onClick={() => navigate("/subject")}>
                         English
                     </button>
                 </div>
-                <div className="grid-item">
+                <div className="subject-grid-item">
                     <img className="subject_icon" src={socsci_img} alt="Social Science" />
                     <button type="button" onClick={() => navigate("/subject")}>
                         Social Science
                     </button>
                 </div>
-                <div className="grid-item">
+                <div className="subject-grid-item">
                     <img className="subject_icon" src={chinese_img} alt="Chinese" />
                     <button type="button" onClick={() => navigate("/subject")}>
                         Chinese

@@ -9,7 +9,6 @@
 
 .register-wrapper {
     display: flex;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* flex-direction: column; */
     /* padding: 50px; */
     /* align-items: center; */
@@ -48,7 +47,6 @@
     color: var(--dark);
     cursor: pointer;
     display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -75,7 +73,6 @@
     color: var(--blue);
     cursor: pointer;
     display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
