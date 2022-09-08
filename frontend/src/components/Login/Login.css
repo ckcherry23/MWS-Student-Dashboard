@@ -5,10 +5,12 @@
     --cream: #f4d087;
     --grey: #e5e5e5;
     --dark: #333333;
+    --bg: #FFEFD5;
 }
 
 .login-wrapper {
     display: flex;
+    background-color: var(--bg);
     /* flex-direction: column; */
     /* padding: 50px; */
     /* align-items: center; */
@@ -26,13 +28,36 @@
     }
  }
 
-.login-wrapper2 {
+.login-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-image: url('../../images/blobanimation.svg');
+    background-repeat: no-repeat; */
+}
+
+.blob {
+    position: absolute;
+    z-index: -100;
+}
+
+.login-form {
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
 .button-wrapper {
@@ -60,6 +85,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    width: 100%
 }
 
 .button-2:hover {
@@ -70,7 +96,7 @@
     background-color: transparent;
     border-radius: 8px;
     border-width: 0;
-    color: var(--blue);
+    color: var(--yellow);
     cursor: pointer;
     display: inline-block;
     font-size: 14px;

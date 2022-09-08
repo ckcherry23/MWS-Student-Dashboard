@@ -40,7 +40,8 @@ export default function Login({ setToken }) {
     return (
         <div className="login-wrapper">
             <img className="loginimg" src={loginimg} alt={"login"} />
-            <div className={"login-wrapper2"}>
+            <div className={"login-container"}>
+            <div className={"login-form"}>
                 <h1>Log in here!</h1>
                 <form onSubmit={handleSubmit}>
                     <label>
@@ -51,15 +52,18 @@ export default function Login({ setToken }) {
                         <p>Password</p>
                         <input type="password" onChange={e => setPassword(e.target.value)} />
                     </label>
+                    <p/>
                     <div className='button-wrapper'>
-                        <button className="button-2" type="submit">Login</button>
+                        <button className="button-2" type="submit">LOGIN</button>
                     </div>
                 </form>
                 <br/>
                 <div>
                     Don't have an account? <button className='register-button' onClick={() => navigate("/register")}>Register</button>
                 </div>
+               </div>
             </div>
+
         </div>
     )
 }
