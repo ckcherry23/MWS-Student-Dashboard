@@ -11,7 +11,8 @@
 }
 
 .chapter-wrapper {
-    background-image: linear-gradient(to right, var(--dark-blue), var(--dark-gray));
+    background: linear-gradient(to right, var(--dark-blue), var(--dark-gray));
+    background-color: var(--dark-gray);
     width: 400px;
     height: 100px;
     border-radius: 16px;
@@ -20,6 +21,7 @@
     box-shadow: 2px 2px 4px #000000;
     display: flex;
     justify-content: space-between;
+    transition: background-color 0.3s linear;
 }
 
 @media (max-width: 1032px) {
@@ -30,7 +32,7 @@
  }
 
 .chapter-wrapper:hover {
-    background-image: linear-gradient(to right, var(--blue), var(--dark-blue));
+    background: var(--yellow);
 }
 
 .chapter-wrapper:active {
